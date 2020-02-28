@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,7 @@ import com.conde.kun.core.view.BaseActivity
 import com.trilogy.bootcampspot.R
 import com.trilogy.bootcampspot.view.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_dashboard.*
+import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class DashboardActivity : BaseActivity<DashboardViewState, DashboardViewModel>() {
@@ -58,8 +60,7 @@ class DashboardActivity : BaseActivity<DashboardViewState, DashboardViewModel>()
                 return true
             }
             android.R.id.home -> {
-                showBackButton(false)
-                findNavController(R.id.fragmentContainer).popBackStack()
+                onBackPressed()
                 return true
             }
         }
@@ -91,15 +92,17 @@ class DashboardActivity : BaseActivity<DashboardViewState, DashboardViewModel>()
     fun showBackButton(show: Boolean) {
         supportActionBar?.setDisplayHomeAsUpEnabled(show)
         supportActionBar?.setHomeButtonEnabled(show)
+        bottomNavigationView.visibility = View.GONE
     }
 
     override fun onBackPressed() {
         val navController = findNavController(R.id.fragmentContainer)
         if (navController.currentDestination?.id == R.id.submissionFragment) {
             showBackButton(false)
+            bottomNavigationView.visibility = View.VISIBLE
             navController.popBackStack()
         } else {
-            super.onBackPressed()
+            moveTaskToBack(true)
         }
     }
 }
