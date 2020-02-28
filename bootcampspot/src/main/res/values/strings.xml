@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Bootcampspot</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username_error">Invalid Email</string>
+    <string name="password_error">Password can not be empty</string>
+    <string name="loading">Loading</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="signin">Sign in</string>
+    <string name="submit">Submit</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="i_do_not_have_an_account">I don\'t have an account yet</string>
+    <string name="i_already_have_an_account">I already have an account</string>
+    <string name="i_remember_my_password">I remember my password</string>
+    <string name="signin_description">Sign in to Bootcamp Spot</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="reset_your_password_success">Success! We\'ve sent instructions on resetting your password to your email address</string>
+    <string name="go_back_to_login">Go back to login</string>
+    <string name="academic_average">Academic Average</string>
+    <string name="overdue_assingments">Overdue Assignments</string>
+    <string name="view_full_profile">View full profile</string>
+    <string name="score">Score</string>
+    <string name="location">Location</string>
+    <string name="grades">Grades</string>
+    <string name="profile">Profile</string>
+    <string name="logout_confirmation">Are you sureyou want to logout?</string>
+    <string name="empty_notifications">You don\'t have any new notification</string>
+    <string name="type">Type</string>
+    <string name="status">Status</string>
+    <string name="submitted_links">Submitted Links</string>
+    <string name="submitted_links_empty">You have not submitted any url yet</string>
+    <string name="comments_empty">There are not comments</string>
+    <string name="comments">Comments</string>
+
+    <string name="error_no_internet">No internet</string>
+    <string name="error_server">Server error, try again later</string>
+    <string name="error_invalid_parameters">Invalid parameters</string>
+    <string name="error_invalid_credentials">Your email address or password is incorrect. Please try again</string>
+    <string name="error_user_already_registered">Email already used</string>
+</resources>

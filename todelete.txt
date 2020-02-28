@@ -1,0 +1,94 @@
+
+
+{"all":
+[
+{"_id": "1",
+"text":"first fact",
+"upvotes":1,
+"user":
+{"_id":"2","name":
+{
+"first":"Facundo",
+"last":"Garcia"
+}}
+}
+},
+{"_id": "2",
+"text":"Another fact that I don't want to talk about",
+"upvotes":1,
+"user":
+{"_id":"1","name":
+{
+"first":"Julio",
+"last":"Kun"
+}}
+},
+{"_id": "3",
+"text":"Why would I like to share a fact?",
+"upvotes":1,
+"user":
+{"_id":"2","name":
+{
+"first":"Facundo",
+"last":"Garcia"
+}}
+},
+{"_id": "4",
+"text":"I am tired, it's late and the server doesn't work....",
+"upvotes":10,
+"user":
+{"_id":"1","name":
+{
+"first":"Julio",
+"last":"Kun"
+}}
+},
+{"_id": "5",
+"text":"I am the worst actor in the industry",
+"upvotes":15,
+"user":
+{"_id":"3","name":
+{
+"first":"Adam",
+"last":"Samdler"
+}}
+}
+
+
+
+]
+}
+
+
+{"_id": "5",
+"text":"I am the worst actor in the industry",
+"upvotes":15,
+"user":
+{"_id":"3","name":
+{
+"first":"Adam",
+"last":"Samdler"
+}}
+}
+
+
+
+{"_id":"1","name":
+{
+"first":"Julio",
+"last":"Kun"
+}}
+
+
+{"_id":"2","name":
+{
+"first":"Facundo",
+"last":"Garcia"
+}}
+
+{"_id":"3","name":
+{
+"first":"Adam",
+"last":"Samdler"
+}}
+

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">core</string>
+
+    <string name="field_name">Name</string>
+    <string name="field_contact_number">Contact Number</string>
+    <string name="field_email">Email</string>
+    <string name="field_subject">Subject</string>
+    <string name="field_message">Message</string>
+
+    <string name="field_error">Must provide a valid %d</string>
+</resources>

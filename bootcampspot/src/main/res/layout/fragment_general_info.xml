@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userInfoContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/userImageContainer"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@android:color/white"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@android:color/black" />
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameTV"
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/userImageContainer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/roleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toRightOf="@id/userImageContainer"
+                app:layout_constraintTop_toBottomOf="@id/nameTV" />
+
+            <TextView
+                android:id="@+id/viewProfileButton"
+                style="@style/LabelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_full_profile"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/roleTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/universityContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfoContainer">
+
+
+            <TextView
+                android:id="@+id/programNameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/lightGray"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="Program name"
+                android:textColor="@color/darkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/universityNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="university"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/programNameTV" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/universityImageContainer"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp"
+                app:contentPadding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/universityNameTV">
+
+                <ImageView
+                    android:id="@+id/universityImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/programNameTV" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/startDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Start Date"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/universityImageContainer" />
+
+            <TextView
+                android:id="@+id/startDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14/01/1989"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/startDateLabel"
+                app:layout_constraintTop_toBottomOf="@id/startDateLabel" />
+
+            <View
+                android:id="@+id/dateSeparator"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/silver"
+                app:layout_constraintBottom_toBottomOf="@id/startDateTV"
+                app:layout_constraintLeft_toRightOf="@id/startDateTV"
+                app:layout_constraintTop_toTopOf="@id/startDateLabel" />
+
+            <TextView
+                android:id="@+id/endDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:text="End Date"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/dateSeparator"
+                app:layout_constraintTop_toBottomOf="@id/universityImageContainer" />
+
+            <TextView
+                android:id="@+id/endDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14/01/1989"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/endDateLabel"
+                app:layout_constraintTop_toBottomOf="@id/endDateLabel" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/academicContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/universityContainer">
+
+            <View
+                android:id="@+id/academicSeparator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/silver"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/scoreLabel"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/score"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/overdueLabel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/academicSeparator" />
+
+            <com.trilogy.bootcampspot.view.widget.CircularChartView
+                android:id="@+id/academicAverageChart"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toLeftOf="@id/scoreLabel"
+                app:layout_constraintRight_toRightOf="@id/scoreLabel"
+                app:layout_constraintTop_toBottomOf="@id/scoreLabel" />
+
+            <TextView
+                android:id="@+id/academicAverageTV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/academicAverageChart"
+                app:layout_constraintLeft_toLeftOf="@id/academicAverageChart"
+                app:layout_constraintRight_toRightOf="@id/academicAverageChart"
+                app:layout_constraintTop_toTopOf="@id/academicAverageChart" />
+
+
+            <TextView
+                android:id="@+id/averageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/academic_average"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/overdueLabel"
+                app:layout_constraintTop_toBottomOf="@id/academicSeparator" />
+
+            <TextView
+                android:id="@+id/averageTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/success_dark_green"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/averageLabel"
+                app:layout_constraintRight_toRightOf="@id/averageLabel"
+                app:layout_constraintTop_toBottomOf="@id/averageLabel" />
+
+            <TextView
+                android:id="@+id/overdueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/overdue_assingments"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/averageLabel"
+                app:layout_constraintRight_toLeftOf="@id/scoreLabel"
+                app:layout_constraintTop_toBottomOf="@id/academicSeparator" />
+
+            <TextView
+                android:id="@+id/overdueTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorDisabled"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/overdueLabel"
+                app:layout_constraintRight_toRightOf="@id/overdueLabel"
+                app:layout_constraintTop_toBottomOf="@id/overdueLabel" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/lightGray"
+            android:orientation="vertical"
+            android:paddingBottom="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/academicContainer">
+
+            <TextView
+                android:id="@+id/locationButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/dashboard_button_background"
+                android:clickable="true"
+                android:drawableRight="@drawable/ic_chevron_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/location" />
+
+            <TextView
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/dashboard_button_background"
+                android:drawableRight="@drawable/ic_chevron_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/logout" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

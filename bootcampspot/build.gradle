@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+apply plugin: "androidx.navigation.safeargs.kotlin"
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        applicationId "com.trilogy.bootcampspot"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+}
+
+dependencies {
+    def root = rootProject.ext.mainApplication
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation root.kotlin
+    implementation root.appCompat
+    implementation root.coreKtx
+    implementation root.axConstraintLayout
+    implementation root.multidex
+
+    implementation root.coroutinesCore
+    implementation root.coroutinesAndroid
+    implementation root.axRoom
+    implementation root.axRoomRx
+    kapt root.axRoomCompiler
+
+    implementation root.lifecycleViewModel
+    implementation root.lifecycleReactive
+    implementation root.lifecycleExtensions
+    implementation root.axRecyclerView
+    implementation root.designSupport
+    implementation root.axNavigation
+    implementation root.axNavigationUI
+    implementation root.axRoom
+    kapt root.axRoomCompiler
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+
+    implementation root.retrofit
+    implementation root.retrofitGson
+    implementation root.retrofitInterceptor
+    implementation root.retrofitAdapter
+    implementation root.rxAndroid
+    implementation root.rxKotlin
+    implementation("com.squareup.okhttp3:okhttp:3.12.8") {
+        force = true
+    }
+
+    implementation root.koin
+    implementation root.koinViewModel
+    implementation root.picasso
+
+
+    implementation 'com.google.android.play:core:1.3.4'
+    implementation project(':core')
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+}
