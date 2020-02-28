@@ -69,7 +69,7 @@ class DefaultBcsRepository(
         return userDataSource.getUserAccount()
     }
 
-    override fun getGrades(enrollmentId: Int): Single<List<GradesResponse>> {
+    override fun getGrades(enrollmentId: Int): Single<List<Grade>> {
         return bcsDataSource.getGrades(enrollmentId)
     }
 

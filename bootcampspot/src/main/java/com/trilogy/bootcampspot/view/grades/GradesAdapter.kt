@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.trilogy.bootcampspot.R
-import com.trilogy.bootcampspot.data.net.response.GradesResponse
+import com.trilogy.bootcampspot.data.net.response.Grade
 import kotlinx.android.synthetic.main.item_grade.view.*
 
 class GradesAdapter(
-    private val grades: List<GradesResponse>,
+    private val grades: List<Grade>,
     private val assignmentClickListener: AssignmentClickListener
 ) :
     RecyclerView.Adapter<GradesAdapter.ViewHolder>() {

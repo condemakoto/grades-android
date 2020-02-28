@@ -2,7 +2,7 @@ package com.trilogy.bootcampspot.view.grades
 
 import com.conde.kun.core.error.BaseException
 import com.conde.kun.core.view.BaseViewModel
-import com.trilogy.bootcampspot.data.net.response.GradesResponse
+import com.trilogy.bootcampspot.data.net.response.Grade
 import com.trilogy.bootcampspot.domain.model.GeneralInfo
 import com.trilogy.bootcampspot.domain.usecase.GetGeneralInfoUseCase
 import com.trilogy.bootcampspot.domain.usecase.GetGradesUseCase
@@ -34,8 +34,8 @@ class GradesViewModel(
     }
 
     private fun getGrades(enrollmentId: Int) {
-        getGradesUseCase.execute(object : DisposableSingleObserver<List<GradesResponse>>() {
-            override fun onSuccess(t: List<GradesResponse>) {
+        getGradesUseCase.execute(object : DisposableSingleObserver<List<Grade>>() {
+            override fun onSuccess(t: List<Grade>) {
                 val vs = viewState.value!!
                 vs.loading = false
                 vs.grades = t
@@ -55,5 +55,5 @@ class GradesViewModel(
 class GradesViewState {
     var loading = true
     var error: BaseException? = null
-    var grades: List<GradesResponse>? = null
+    var grades: List<Grade>? = null
 }

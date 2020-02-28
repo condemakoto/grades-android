@@ -62,8 +62,9 @@ class GeneralInfoFragment : BaseFragment<GeneralInfoViewState, GeneralInfoViewMo
         viewState.studentResume?.let {
             averageTV.text = it.academicAverageGrade
             overdueTV.text = it.overdueAssignmentCount?.toString()
-            academicAverageTV.text = it.academicAverageValue.toString()
-            academicAverageChart.perc = it.academicAverageValue?.toFloat()!!
+            val average: Float = if (it.academicAverageValue == null) 0f else it.academicAverageValue
+            academicAverageTV.text = String.format("%.2f", average)
+            academicAverageChart.perc = average
             academicAverageChart.invalidate()
         }
 

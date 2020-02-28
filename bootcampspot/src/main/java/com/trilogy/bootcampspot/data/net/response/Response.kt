@@ -91,6 +91,6 @@ data class StudentResume (
     val maxAllowedAbsences: Int?,
     val remainingAbsenceCount: Int?,
     val careerCompletionPercentage: Int?,
-    val academicAverageValue: Int?,
+    val academicAverageValue: Float?,
     val academicAverageGrade: String?
 )

@@ -9,6 +9,6 @@ interface BcsDataSource {
     fun requestPasswordReset(username: String): Single<BaseResponse>
     fun getUserInfo(): Single<MeResponse>
     fun getDashboard(enrollmentId: Int): Single<DashboardResponse>
-    fun getGrades(enrollmentId: Int): Single<List<GradesResponse>>
+    fun getGrades(enrollmentId: Int): Single<List<Grade>>
     fun getCourseworkDetail(assignmentId: Int): Single<CourseworkResponse>
 }

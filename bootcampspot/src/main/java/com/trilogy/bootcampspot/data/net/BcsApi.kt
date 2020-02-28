@@ -25,7 +25,7 @@ interface BcsApi {
     fun getDashboard(@Body request: DashboardRequest): Single<DashboardResponse>
 
     @POST("/broker/grades")
-    fun getGrades(@Body request: DashboardRequest): Single<List<GradesResponse>>
+    fun getGrades(@Body request: DashboardRequest): Single<GradeResponse>
 
     @POST("/broker/courseworkDetail")
     fun getCourseworkDetail(@Body request: CourseworkRequest): Single<CourseworkResponse>

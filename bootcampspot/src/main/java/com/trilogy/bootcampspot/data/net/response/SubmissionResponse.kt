@@ -1,6 +1,12 @@
 package com.trilogy.bootcampspot.data.net.response
 
-data class GradesResponse(
+data class GradeResponse(
+    val grades: List<Grade>?,
+    val academicAverageGrade: String?,
+    val roundAcademicAverageValue: Float?
+)
+
+data class Grade(
     val assignment: Assignment,
     val context: AssignmentContext,
     val submission: Submission,

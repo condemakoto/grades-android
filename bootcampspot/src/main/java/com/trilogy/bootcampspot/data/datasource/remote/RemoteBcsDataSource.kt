@@ -29,8 +29,8 @@ class RemoteBcsDataSource(private val bcsApi: BcsApi) : BcsDataSource {
         return bcsApi.getDashboard(DashboardRequest(enrollmentId))
     }
 
-    override fun getGrades(enrollmentId: Int): Single<List<GradesResponse>> {
-        return bcsApi.getGrades(DashboardRequest(enrollmentId))
+    override fun getGrades(enrollmentId: Int): Single<List<Grade>> {
+        return bcsApi.getGrades(DashboardRequest(enrollmentId)).map {response ->  response.grades}
     }
 
     override fun getCourseworkDetail(assignmentId: Int): Single<CourseworkResponse> {
