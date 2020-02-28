@@ -1,2 +1,2 @@
-include ':core', ':bootcampspot', ':data', ':domain'
+include ':core', ':bootcampspot'
 rootProject.name='My Application'
