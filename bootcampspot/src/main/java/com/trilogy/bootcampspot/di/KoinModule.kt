@@ -23,7 +23,6 @@ import com.trilogy.bootcampspot.view.forgotpassword.ForgotPasswordViewModel
 import com.trilogy.bootcampspot.view.grades.GradesViewModel
 import com.trilogy.bootcampspot.view.onboarding.login.LoginViewModel
 import com.trilogy.bootcampspot.view.splash.SplashViewModel
-import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.ext.koin.androidContext
