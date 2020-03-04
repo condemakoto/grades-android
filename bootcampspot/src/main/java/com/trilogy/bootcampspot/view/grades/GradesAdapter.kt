@@ -1,8 +1,11 @@
 package com.trilogy.bootcampspot.view.grades
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.trilogy.bootcampspot.R
 import com.trilogy.bootcampspot.data.net.response.Grade
@@ -29,11 +32,21 @@ class GradesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val grade = grades[position]
-        if (grade.submissionGrade == null) {
+        val resources = holder.itemView.context.resources
+        val color: Int
+        if (grade.submissionGrade == null || grade.submissionGrade.grade == null    ) {
             holder.itemView.gradeTV.text = "-"
+            color = ContextCompat.getColor(holder.itemView.context, R.color.error)
         } else {
-            holder.itemView.gradeTV.text = grade.submissionGrade.grade
+            val gradeText = grade.submissionGrade.grade
+            holder.itemView.gradeTV.text = gradeText
+            if (gradeText.contains('A') || gradeText.contains('B')) {
+                color = ContextCompat.getColor(holder.itemView.context, R.color.success_dark_green)
+            } else {
+                color = ContextCompat.getColor(holder.itemView.context, R.color.error)
+            }
         }
+        holder.itemView.gradeTV.setTextColor(color)
         holder.itemView.typeTV.text = grade.context.name
         holder.itemView.statusTV.text = "Submitted"
         holder.itemView.submissionNameTv.text = grade.assignment.title

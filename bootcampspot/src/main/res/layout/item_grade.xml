@@ -28,8 +28,7 @@
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:gravity="center"
-                >
+                android:gravity="center" >
                 <TextView
                     android:id="@+id/gradeTV"
                     android:layout_width="40dp"
