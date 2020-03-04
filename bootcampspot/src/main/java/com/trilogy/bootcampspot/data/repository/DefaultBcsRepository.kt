@@ -37,10 +37,7 @@ class DefaultBcsRepository(
 
     override fun requestPasswordReset(username: String): Single<Boolean> {
         return bcsDataSource.requestPasswordReset(username).map { response: BaseResponse ->
-            response.success?.let {
-                true
-            }
-            false
+            response.success ?: false
         }
     }
 

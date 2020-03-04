@@ -29,6 +29,7 @@ class ForgotPasswordViewModel(private val requestPasswordResetUseCase: RequestPa
                     } else {
                         value.error = BaseException()
                     }
+                    value.loading = false
                     viewState.value = value
                 }
 
